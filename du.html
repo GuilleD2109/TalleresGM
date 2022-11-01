@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+</head>
+<body>
+<form method="post">
+ <h2>Rellena tu CV</h2>
+<fieldset>
+ <legend>Datos generales</legend>
+ Nombre 
+ <br/>
+ <input type="text" name="nombre" value="" />
+ <br/>
+ Apellidos 
+ <br/>
+ <input type="text" name="apellidos" value="" />
+ <br/>
+ Contraseña 
+ <br/>
+ <input type="text" name="contrasena" value="" /> 
+ <br/>
+ Confirme contraseña 
+ <br/>
+ <input type="text" name="cocontrasena" value="" /> 
+ <br/>
+ Identificacion 
+ <br/>
+ <select name="combo">
+    <option value="1">TI</option>
+    <option value="2" selected>CC</option>
+    <option value="3">TE</option>
+  </select>
+  <input type="text" name="cedula" value=""  size="10" maxlength="9" /> 
+ <br/>
+ Sexo
+ </br>
+ <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre
+<br/><input type="radio" name="sexo" value="mujer" /> Mujer<br/>
+<br/>
+Incluir mi foto <input type="file" name="foto" />
+<br/><br/>
+<input name="suscribir" type="checkbox" value="suscribir" checked="checked"/>
+Estudiante...
+<br/><br/>
+
+    Departamento
+    <br/>
+    <input type="text" list="items" />
+    <!-- Lista de opciones -->
+    <datalist id="items">
+      <option value="Santander">Opcion georeferenciada</option>
+      <option value="Norte de Santander">Opcion mas usada</option>
+      <option value="Boyaca">Boyaca?</option>
+    </datalist>
+    <br/>
+    <br/>
+    Fecha de nacimiento
+    <br/>
+    <input type="date">
+    <br/><br/>
+    Temas de interes
+    <br/>
+    <form action="#">
+        <select name="options" id="lang">
+          <option value="javascript">Seleccione...</option>
+          <option value="javascript">JavaScript</option>
+          <option value="php">PHP</option>
+          <option value="java">Java</option>
+          <option value="golang">Golang</option>
+          <option value="python">Python</option>
+          <option value="c#">C#</option>
+          <option value="C++">C++</option>
+          <option value="erlang">Erlang</option>
+        </select>
+  </form><br/>
+  <br/>
+  <button type="button" onclick="location.href='Lista.html'">Guardar cambios</button>
+  <button name="button2" type="reset">Borrar datos</button>
+  <button type="button" onclick="location.href='Lista.html'">Regresar</button>
+ </fieldset>
+ <br/>
+
+</form>
+</body>
+</html>
