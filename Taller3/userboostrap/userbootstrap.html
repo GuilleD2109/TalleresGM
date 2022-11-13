@@ -1,33 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="userbootstrap-estilos.css">
-  <title>Formulario Registro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="userbootstrap-estilos.css">
+<title>Formulario Registro</title>
 </head>
 <body>
-  <section class="form-register">
-    <h4>Formulario Registro</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-    <input class="controls" type="text" name="direccion" id="direccion" placeholder="Ingrese su direccion">
-    <input class="controls" type="text" name="cedula" id="cedula" placeholder="Ingrese su cedula">
-    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
-    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    <input class="controls" type="email" name="telefono" id="telefono" placeholder="Ingrese su telefono">
-    <form name="formulario">
-        <input class="controls" type="text" list="items" placeholder="Pais"/>
-        <datalist id="items">
-          <option value="Colombia"></option>
-          <option value="España"></option>
-          <option value="Chile"></option>
-        </datalist>
-    </form>
-    <div class="title-cards"><div class="btn">
-        <a href="">Registro</a>
+  <div class="form-register my-5">
+  <form>
+    <div class="form-group row py-2">
+      <p class=" col-xl-12" id="tittlemax">Formulario Registro</p>
     </div>
-  </section>
+    <div class="row py-2">
+      <div class="col-sm-6 ">
+        <input type="name" class="form-control" placeholder="Nombre">
+      </div>
+      <div class="col-sm-6">
+        <input type="apellido" class="form-control" placeholder="Apellido">
+      </div>
+    </div>
+    <div class="row py-2">
+      <div class="col-sm-6">
+        <input type="number" pattern="[0-9]+" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" placeholder="Cedula">
+      </div>
+      <div class="col-sm-6">
+        <input type="number" pattern="[0-9]+" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="validate form-control"  placeholder="Telefono">
+      </div>
+    </div>
+    <div class="row py-2">
+      <div class="col-sm-6">
+        <input type="dir" class="form-control" placeholder="Direccion">
+      </div>
+      <div class="col-sm-6">
+        <input  class="form-control" type="email" pattern=".+@globex\.com" required="true" placeholder="Correo">
+      </div>
+    </div>
+    <div class="row py-2">
+      <div class="col-sm-6">
+        <input type="password" class="form-control" placeholder="Contraseña">
+      </div>
+      <div class="col-sm-6">
+        <form name="formulario">
+          <input class="form-control" type="text" list="items" placeholder="Pais"/>
+          <datalist id="items">
+            <option value="Colombia"></option>
+            <option value="España"></option>
+            <option value="Chile"></option>
+          </datalist>
+      </form>
+      </div>
+    </div>
+    <div class="form-group row py-2">
+      <div class="centrado col-sm-12">
+        <button type="submit button" class="btn btn-primary">REGISTRARSE</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
