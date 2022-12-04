@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="Formulario/style4.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f244b5474e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <main>
+            <i class="fa-sharp fa-solid fa-turn-down-left"><a href="Menu.html">Regresar</a></i>
+            <div class="titulo">
+                <h1>Registro</h1>
+            </div>
+
+            <form action="" class="formulario" method="post" id="formulario">
+                 <!-- Grupo: Nombre -->
+                 <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombres</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre">
+                        <i class="formulario__validacion-estado far fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Este campo debe estar lleno y tener un maximo de 25 caracteres
+                    </p>
+                </div>
+
+                <!-- Grupo: Apellido -->
+                <div class="formulario__grupo" id="grupo__apellido">
+                    <label for="apellido" class="formulario__label">Apellidos</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="apellido" id="apellido">
+                        <i class="formulario__validacion-estado far fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Este campo debe estar lleno y tener un maximo de 25 caracteres
+                    </p>
+                </div>
+
+                <!-- Grupo: Pais -->
+                <div class="formulario__grupo" id="grupo__pais">
+                    <label for="pais" class="formulario__label">Seleccione su país de origen </label>
+                    <select name="paises" class="">
+                        <option id="pais1">Alemania</option>
+                        <option id="pais2">Canadá</option>
+                        <option id="pais3">Colombia</option>
+                        <option id="pais4">Dinamarca</option>
+                        <option id="pais5">Ecuador</option>
+                        <option id="pais6">Estados Unidos</option>
+                        <option id="pais7">Francia</option>
+                        <option id="pais8">Inglaterra</option>
+                        <option id="pais9">Italia</option>
+                        <option id="pais10">México</option>
+                        <option id="pais11">Panamá</option>
+                        <option id="pais12">Paraguay</option>
+                        <option id="pais13">Venezuela</option>
+                    </select>
+                </div>
+
+                <!-- Grupo: fecha nacimiento -->
+                <div class="formulario__grupo" id="grupo__nacimiento">
+                    <label for="Fecha nacimiento" class="formulario__label">Fecha nacimiento</label>
+                    <div class="formulario__grupo-input">
+                        <input type="date" class="formulario__input" name="usuario" id="usuario">
+                        <i class="formulario__validacion-estado far fa-times-circle"></i>
+                    </div>
+                </div>
+
+
+                <!-- Grupo: Password -->
+                <div class="formulario__grupo" id="grupo__password">
+                    <label for="password" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password">
+                        <i class="formulario__validacion-estado far fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Este campo debe estar lleno y debe
+                        tener máximo 20 y mínimo
+                        15 caracteres. debe contener
+                        mayúsculas , numeros, letras y/o los
+                        siguientes caracteres [#,%,/,&] </p>
+                </div>
+
+
+                <!-- Grupo: Password2 -->
+                <div class="formulario__grupo" id="grupo__password2">
+                    <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password2" id="password2">
+                        <i class="formulario__validacion-estado far fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Las password deben ser iguales </p>
+                </div>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+
+                <div class="formulario__grupo">
+                    <p class="auto-style3"><input name="pago1" checked="checked" class="pago" type="radio"
+                        style="width:20px; height: auto" value="Ventanilla" />&nbsp;<span class="auto-style4">  No he sufrido enfermedades</span></p>
+                    <p class="auto-style3"><input class="pago" name="pago1" type="radio" style="width: 20px; height: auto"
+                            value="Deposito" /><span class="auto-style4"> He sufrido enfermedades</span>
+                    </p>
+                <p>&nbsp;</p>
+                </div>
+
+                <div id="div1" style="display:none;">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+
+                    <div class="formulario__grupo">
+                        <p class="auto-style3"><input class="pago2" checked="checked" name="pago1" type="radio" style="width: 20px; height:auto"
+                            value="Ventanilla" /><span class="auto-style4"> Enfermedades leves</span>
+                        </p>
+                        <p class="auto-style3"><input class="pago2" name="pago1" type="radio" style="width: 20px; height:auto"
+                                value="Ventanilla" /><span class="auto-style4"> Enfermedades renales</span>
+                        </p>
+                        <p class="auto-style3"><input class="pago2" name="pago1" type="radio" style="width: 20px; height: auto"
+                            value="Deposito" /><span class="auto-style4"> Enfermedades contagiosas</span>
+                        </p>
+                        <p class="auto-style3"><input class="pago2" name="pago1" type="radio" style="width: 20px; height: auto"
+                        value="Ventanilla" /><span class="auto-style4"> Enfermedades epaticas</span>
+                        </p>
+                    <p>&nbsp;</p>
+
+                </div>
+                </div>
+
+                <div id="div4" style="display:none;">
+                    <div class="formulario__grupo" id="grupo__nacimiento">
+                        <label for="Fecha nacimiento" class="formulario__label">Cuales</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="usuario" id="usuario">
+                            <i class="formulario__validacion-estado far fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">Este campo debe estar lleno y debe
+                            tener máximo 20 y mínimo
+                            10 caracteres. No debe contener
+                            caracteres extraños.</p>
+                    </div>
+                </div>
+                
+                <!-- Grupo: Terminos -->
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i><b>ERROR:</b> Por favor completa el formulario
+                        correctamente</p>
+                </div>
+                <!-- Grupo: Boton -->
+                <div class="formulario__grupo formulario__grupo-btn-registrar">
+                    <div class="formulario__grupo" id="grupo__terminos">
+                        <label class="formulario__label" style="padding-top: 10px; position: center center;"> 
+                            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                            Acepto los terminos y condiciones</label>
+                    </div>
+                    <button type="submit" class="formulario__btn">Registrar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario registrado
+                        exitosamente!</p>
+                </div>
+            </form>
+        </main>
+
+
+        
+
+    </div>
+
+    <script src="Formulario/main.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

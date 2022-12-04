@@ -1,0 +1,117 @@
+<!-- Ejercicio 154: Leer contenido JSON desde una API con la función ajax(). -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Grilla/estilos.css">
+    <script src="https://kit.fontawesome.com/f244b5474e.js" crossorigin="anonymous"></script>
+    <title>Grilla</title>
+
+    <style>
+        .resaltar {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="importarJson">Importar JSON</button>
+
+    <br/><br/>
+
+    <table border="1" id="personas" style="background-color: rgb(125, 208, 211); opacity: 0.7">
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+            <th>address street</th>
+            <th>address suite</th>
+            <th>address city</th>
+            <th>address zipcode</th>
+
+            <th>phone</th>
+            <th>website</th>
+            <th>company name</th>
+            <th>company catchPhrase</th>
+            <th>company bs</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script src="Grilla/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            $('#personas').hide();
+
+            $('#importarJson').click(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "Grilla/users.json",
+                    dataType: "json"
+                }).done((data) => {
+                    let personas = data.results;
+
+                    $('#personas tbody').empty();
+
+                    $.each(personas, function(indice, persona){
+                        let fila = $('<tr>');
+                        fila.append($(`<td>${persona.id}</td>`));
+                        fila.append($(`<td>${persona.name}</td>`));
+                        fila.append($(`<td>${persona.username}</td>`));
+                        fila.append($(`<td>${persona.email}</td>`));
+                        fila.append($(`<td>${persona.address.street}</td>`));
+                        fila.append($(`<td>${persona.address.suite}</td>`));
+                        fila.append($(`<td>${persona.address.city}</td>`));
+                        fila.append($(`<td>${persona.address.zipcode}</td>`));
+                        //fila.append($(`<td>${persona.geo.lat}</td>`)); Por alguna razon dan error al intentar mostrarse - <th>geo lat</th>
+                        //fila.append($(`<td>${persona.geo.lng}</td>`)); Por alguna razon dan error al intentar mostrarse - <th>geo lng</th>
+                        fila.append($(`<td>${persona.phone}</td>`));
+                        fila.append($(`<td>${persona.website}</td>`));
+                        fila.append($(`<td>${persona.company.name}</td>`));
+                        fila.append($(`<td>${persona.company.catchPhrase}</td>`));
+                        fila.append($(`<td>${persona.company.bs}</td>`));
+
+                        $('#personas tbody').append(fila);
+                    });
+
+                    $('#personas').show();
+                });
+            });
+        });
+    </script>
+    
+    <script>
+        $(document).ready(() => {
+            $('th').hover(function() {
+                let indiceColumna = $(this).parent().children().index(this);
+
+                $(this).addClass('resaltar');
+                $(`table td:nth-child(${indiceColumna + 1})`).addClass('resaltar');
+            }, function() {
+                $('table tr').children().removeClass('resaltar');
+            });
+
+            $('th').click(function() {
+                let indiceColumna = $(this).parent().children().index(this);
+
+                $(`table th:not(:nth-child(${indiceColumna + 1})`).hide();
+
+                $(`table td:not(:nth-child(${indiceColumna + 1})`).hide();
+            });
+        });
+    </script>
+<br/>
+<div class="title-cards2"><i class="fa-sharp fa-solid fa-turn-down-left"><a href="Menu.html">Regresar</a></i></div>
+</body>
+
+</html>
