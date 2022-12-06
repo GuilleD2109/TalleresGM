@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f244b5474e.js" crossorigin="anonymous"></script>
+    <script defer src="Formulario/main.js"></script>
+    <script type="text/javascript">
+        function showContent() {
+            element = document.getElementById("content");
+            check = document.getElementById("check");
+            element2 = document.getElementById("content2");
+            check2 = document.getElementById("check2");
+            if (check.checked) {
+                element.style.display='block';
+            }
+            else {
+                element.style.display='none';
+            }
+            if (check2.checked) {
+                element2.style.display='block';
+            }
+            else {
+                element2.style.display='none';
+            }
+        }
+    </script>
 </head>
 <body>
     <a href="Menu.html" id="previous" class="previous">&laquo; Regresar</a>
@@ -95,44 +116,31 @@
                         <input type="password" class="formulario__input" name="password2" id="password2">
                         <i class="formulario__validacion-estado far fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">Las password deben ser iguales </p>
+                    <p input class="formulario__input-error">Las password deben ser iguales </p>
                 </div>
-
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-
                 <div class="formulario__grupo">
-                    <p class="auto-style3"><input name="pago1" checked="checked" class="pago" type="radio"
-                        style="width:20px; height: auto" value="Ventanilla" />&nbsp;<span class="auto-style4">  No he sufrido enfermedades</span></p>
-                    <p class="auto-style3"><input class="pago" name="pago1" type="radio" style="width: 20px; height: auto"
-                            value="Deposito" /><span class="auto-style4"> He sufrido enfermedades</span>
-                    </p>
+                    <input input name="opc1" type="radio" checked='checked' onchange="javascript:showContent()"/> No he sufrido enfermedades
+                </br>
+                    <input name="opc1" type="radio" id="check" value="1" onchange="javascript:showContent()" /> He sufrido enfermedades
                 <p>&nbsp;</p>
                 </div>
-
-                <div id="div1" style="display:none;">
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-
+                <div id="content" style="display:none;">
                     <div class="formulario__grupo">
-                        <p class="auto-style3"><input class="pago2" checked="checked" name="pago1" type="radio" style="width: 20px; height:auto"
-                            value="Ventanilla" /><span class="auto-style4"> Enfermedades leves</span>
-                        </p>
-                        <p class="auto-style3"><input class="pago2" name="pago1" type="radio" style="width: 20px; height:auto"
-                                value="Ventanilla" /><span class="auto-style4"> Enfermedades renales</span>
-                        </p>
-                        <p class="auto-style3"><input class="pago2" name="pago1" type="radio" style="width: 20px; height: auto"
-                            value="Deposito" /><span class="auto-style4"> Enfermedades contagiosas</span>
-                        </p>
-                        <p class="auto-style3"><input class="pago2" name="pago1" type="radio" style="width: 20px; height: auto"
-                        value="Ventanilla" /><span class="auto-style4"> Enfermedades epaticas</span>
-                        </p>
+                        <input name="opc" type="radio" onchange="javascript:showContent()"> Enfermedades leves
+                    </br>
+                        <input name="opc" type="radio" onchange="javascript:showContent()"> Enfermedades renales
+                    </br>
+                        <input name="opc" type="radio" id="check2" value="1" onchange="javascript:showContent()" /> Enfermedades contagiosas
+                    </br>
+                        <input name="opc" type="radio" onchange="javascript:showContent()"> Enfermedades epaticas
+                    </br>
+
                     <p>&nbsp;</p>
 
                 </div>
                 </div>
 
-                <div id="div4" style="display:none;">
+                <div id="content2" style="display:none;">
                     <div class="formulario__grupo" id="grupo__nacimiento">
                         <label for="Fecha nacimiento" class="formulario__label">Cuales</label>
                         <div class="formulario__grupo-input">
@@ -169,9 +177,5 @@
         
 
     </div>
-
-    <script src="Formulario/main.js"></script>
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
-
 </html>

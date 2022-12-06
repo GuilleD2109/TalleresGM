@@ -154,31 +154,3 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
-
-$(document).ready(function(){
-	$(".pago").click(function(evento){
-	  
-		var valor = $(this).val();
-	  
-		if(valor == 'Deposito'){
-			$("#div1").css("display", "block");
-			$("#div2").css("display", "none");
-		}else{
-			$("#div1").css("display", "none");
-			$("#div2").css("display", "block");
-		}
-});});
-
-$(document).ready(function(){
-	$(".pago2").click(function(evento){
-	  
-		var valor = $(this).val();
-	  
-		if(valor == 'Deposito'){
-			$("#div4").css("display", "block");
-			$("#div2").css("display", "none");
-		}else{
-			$("#div4").css("display", "none");
-			$("#div2").css("display", "block");
-		}
-});});
