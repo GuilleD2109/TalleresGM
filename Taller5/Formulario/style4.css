@@ -2,6 +2,25 @@
 	box-sizing: border-box;
 }
 
+#previous:hover {
+	background: #73c99d;
+	color: #fff;
+  }
+  
+  #previous {
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	margin: 10px;
+	text-decoration: none;
+	color: #520b0b;
+	border: 1px solid #5e3838;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+	background-color: white;
+  }
+
 div.titulo{
     width: 100%;
     text-align: center;

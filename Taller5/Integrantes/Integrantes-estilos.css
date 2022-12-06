@@ -5,6 +5,25 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+#previous:hover {
+	background: #73c99d;
+	color: #fff;
+  }
+  
+  #previous {
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #520b0b;
+	border: 1px solid #5e3838;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+  }
+  
 body {
     background-image: url("https://www.todofondos.net/wp-content/uploads/fondos-de-colores-lisos-espanol-hd-wallpapers-y-fotos.-fondo-para-computadora-lisos.jpg");
     background-size: cover;

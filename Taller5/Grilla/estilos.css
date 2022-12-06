@@ -1,0 +1,61 @@
+*{
+  font-size: 12px;
+}
+
+#previous:hover {
+	background: #73c99d;
+	color: #fff;
+  }
+  
+  #previous {
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #520b0b;
+	border: 1px solid #5e3838;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+  background-color: white;
+  }
+
+body {
+    background-image: url("https://www.todofondos.net/wp-content/uploads/fondos-de-colores-lisos-espanol-hd-wallpapers-y-fotos.-fondo-para-computadora-lisos.jpg");
+    background-size: cover;
+  }
+
+  #myInput {
+    background-image: url('https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */  background-size: 18px;
+    width: 10%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+    background-color: white;
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #e67b7b;
+}
